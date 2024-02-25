@@ -2,9 +2,9 @@ FROM ollama/ollama:latest
 
 RUN /bin/sh -c "/bin/ollama serve & sleep 1 && ollama pull gemma:2b"
 
-ENTRYPOINT [ "/bin/ollama" ]
+ENTRYPOINT [ ]
 
-CMD [ "serve" ]
+# CMD [ "serve" ]
 
 # ENTRYPOINT [ ]
-# CMD [ "/bin/sh", "-c", "/bin/ollama serve & sleep 60 && /bin/ollama run llama2  & wait"]
+CMD [ "/bin/sh", "-c", "/bin/ollama serve & sleep 60 && /bin/ollama run gemma:2b  & wait"]
